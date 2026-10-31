@@ -1,20 +1,23 @@
-# Clara — Controle Financeiro
+# Ateliê — Sistema de Agendamento
 
-Dashboard financeiro responsivo para acompanhar entradas, despesas, saldo e lançamentos recentes.
+Protótipo responsivo para organizar serviços, horários e reservas de clientes.
 
 ## Recursos
 
-- Resumo de entradas, despesas e saldo disponível.
-- Cadastro de lançamentos com descrição, categoria, tipo, valor e data.
-- Histórico ordenado por data.
-- Layout adaptado para celular e desktop.
-- Persistência local dos lançamentos usando `localStorage`.
+- Tela de acesso demonstrativa.
+- Cadastro e remoção de serviços, com duração e preço.
+- Agenda semanal com atendimentos marcados.
+- Cadastro manual de horários pelo painel.
+- Página pública de reserva com seleção de serviço, data e horário.
+- Bloqueio dos horários já ocupados na data escolhida.
+- Persistência local usando `localStorage`.
 
 ## Como executar
 
-1. Baixe `controle-financeiro.html`.
+1. Baixe `agendamento.html`.
 2. Abra o arquivo em um navegador atualizado.
-3. Se quiser publicar, adicione o arquivo ao seu repositório e habilite hospedagem estática, como GitHub Pages.
+3. Para acessar a demonstração, use qualquer e-mail e uma senha com pelo menos quatro caracteres.
+4. No menu, abra **Serviços** para cadastrar opções ou **Link de agendamento** para ver a página de reservas.
 
 Não há instalação de dependências nem etapa de build.
 
@@ -23,21 +26,23 @@ Não há instalação de dependências nem etapa de build.
 - HTML
 - CSS
 - JavaScript
-- `localStorage` do navegador
+- `localStorage` e `sessionStorage` do navegador
 
 ## Dados de demonstração
 
-O projeto começa com alguns lançamentos fictícios para preencher o dashboard. Ao adicionar novos registros, os totais e a lista são atualizados. Os dados ficam armazenados somente no navegador e dispositivo usados.
+O calendário começa com serviços e atendimentos fictícios. A tela de acesso apenas simula uma sessão; não valida credenciais nem cria uma conta real.
 
 ## Limitações
 
-- Não há conta de usuário, API ou sincronização entre dispositivos.
-- Os dados iniciais e limites de orçamento são demonstrativos.
-- O seletor de período é visual; os lançamentos não são filtrados por mês.
+- Os dados existem somente no navegador e dispositivo usados.
+- A página de reserva não envia e-mail ou notificações.
+- A autenticação não oferece segurança real.
+- O calendário demonstra uma semana e as setas de navegação não alteram o período.
 
 ## Próximas melhorias
 
-- Filtrar relatórios por mês e categoria.
-- Permitir editar e excluir lançamentos.
-- Tornar os limites de orçamento editáveis.
-- Adicionar exportação CSV e integração com uma API.
+- Implementar autenticação e banco de dados.
+- Gerar disponibilidade com regras de expediente, intervalos e folgas.
+- Adicionar confirmação, cancelamento e reagendamento.
+- Enviar notificações por e-mail ou WhatsApp.
+- Oferecer visualizações de calendário mensal e semanal navegáveis.
